@@ -1,0 +1,42 @@
+<div id="container">
+  <div id="content">
+    <div id="about">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <h1>
+        <div style='float:left; margin-bottom:20px;'>
+          ISS Real-Time Tracking
+        </div>
+      </h1>
+      <h3 style='clear:both' class="subhead">
+        <a href="https://en.wikipedia.org/wiki/International_Space_Station">ISS</a> or the International Space Station is a modular space station in low Earth Orbit and one of the most important space stations mankind has built so far.
+      </h3>
+      <p id='pleft'>
+        It is a collaborative project of 5 space agencies namely <a href="https://www.nasa.gov/">NASA</a>, <a href="http://en.roscosmos.ru/">Roscosmos</a>, <a href="https://global.jaxa.jp/">JAXA</a>, <a href="http://www.esa.int/">ESA</a>, <a href="https://www.asc-csa.gc.ca/eng/Default.asp">CSA</a>.
+      </p>
+      <p id='pright'>
+        Thus, it is the largest space station to have been built by humans and also the third-brightest object in the sky. Refer to the following links for more information.
+      </p>
+      <ul>
+        <li><a href="https://theconversation.com/curious-kids-how-big-is-the-international-space-station-121442">How big is the ISS?</a></li>
+        <li><a href="https://www.nasa.gov/mission_pages/station/research/news/15_ways_iss_benefits_earth">Benefits of the ISS to Earth</a></li>
+        <li><a href="https://spotthestation.nasa.gov/sightings/index.cfm">How to spot the ISS?</a></li>
+      </ul>
+      <p>
+        This was the basic information about the ISS. Below are the real time co-ordinates of the ISS. Each time this webpage is refreshed, the co-ordinates will be updated. However if the API or jQuery have issues, the co-ordinates may not appear.
+      </p>
+      <div class="mypanel"></div>
+
+      <script>
+      $.getJSON('http://api.open-notify.org/iss-now.json', function(data) {
+          
+          var text = `Latitude: ${data.iss_position.latitude}<br>
+                      Longitude: ${data.iss_position.longitude}<br>`
+                      
+          $(".mypanel").html(text);
+          $(".mypanel").css({"font-size": "200%", "font-style": "italic", "font-weight": "bold"});
+      });
+      </script>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900); 
+body {
+    background-color: #141414;
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/15/ISS_emblem.png'), url('https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/bbbf2a17-987c-4fe6-b190-ac8fe0e235e9');
+    background-position: 70% 25%, center;
+            background-repeat: no-repeat, repeat;
+            background-size:200px 200px, cover;
+      margin:0; padding:0;
+      overflow-x:hidden;
+      height:100%;
+      font-family: 'Lato', Helvetica, arial, sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.45;
+      color: #eee;
+      color: rgba(255,255,255,.85);
+  }
+  #container { 
+      padding-top: 50px;
+  }
+  #content {
+      max-width: 43em;
+      padding:10px;
+      margin: 0 auto;
+  }
+  h1 {
+      font-size: 4.8em;
+      font-weight: 100;
+      text-transform: uppercase;
+      margin: 0;
+  }
+  h3 {
+      font-size: 2.4em;
+      font-weight: 300;
+      line-height: 1.5;
+  }
+  p, li {
+      font-size: 1.7em;
+  }
+  a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  p#pleft {
+      max-width:20em;
+      float:left;
+  }
+  p#pright {
+      max-width:20em;
+      float:left;
+  }
+  ul {
+      clear:both;
+  }
+
+  html { font-size: 62.5%; }
+  body { font-size: 1em;}
+  
+  @media (max-width: 300px) {
+      html { font-size: 70%; }
+      
+  }
+  @media (max-width: 440px) {
+      h1 { line-height:55px; }    
+  }
+  @media (max-width: 460px) { 
+    h1 { margin-top:50px; text-align:center; }
+  }
+  @media (min-width: 600px) {
+      html { font-size: 80%; }
+      
+  }
+  @media (min-width: 880px) {
+      html { font-size: 120%; }
+      p, li { font-size: 1em; }
+      p#pright { margin-left:3em; }   
+  }
